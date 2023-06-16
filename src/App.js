@@ -12,13 +12,31 @@ const nayok = {
 const alignment = {
   textAlign: 'center',
 }
+const singers = [
+  {name: 'Dr Mahfuzur Rahman', job: 'Ghumte parina Sararat dhore'}, 
+  {name: 'Eva Rahman', job: 'Ar koto rat aka thakbo'}, 
+  {name: 'Momotaz Mohol', job: 'Morar kokil'}, 
+  {name: 'Hero Alom', job: 'O baby O baby'},
+]
 function App() {
-  
+  const nayoks = ['Rubel' , 'Manna', 'Bapparaz', 'Sakil Khan'];
   return(
     <>
-      <Person name = 'Rubel' nayika = 'Munmun'></Person>
-      <Person name = 'Bapparaz' nayika = 'Mala'></Person>
-      <Person name = 'Kuber' nayika = 'Kopila'></Person>
+
+    {
+      nayoks.map(nayok => <li>Name: {nayok}</li>)
+    }
+    {
+      singers.map(singer => <Person name = {singer.name}></Person>)
+    }
+    {/* {
+      nayoks.map(nayok => <Person name = {nayok}></Person>)
+    } */}
+
+    
+      {/* <Person name = {nayoks[0]} nayika = 'Munmun'></Person>
+      <Person name = {nayoks[1]} nayika = 'Mala'></Person>
+      <Person name = {nayoks[2]} nayika = 'Kopila'></Person> */}
       <h1 style={{textAlign : 'center'}}>Hey, This is an amazing morning</h1>
       <Nayok></Nayok>
       <Nayok></Nayok>
